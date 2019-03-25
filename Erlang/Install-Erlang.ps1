@@ -1,4 +1,5 @@
 $erlangPath = "HKLM:\SOFTWARE\Wow6432Node\Ericsson\Erlang"
+$installFile = "otp_win64_20.3.exe"
 
 $scriptDir = Split-Path -Path $MyInvocation.MyCommand.Definition -Parent
 
@@ -8,7 +9,7 @@ $scriptDir = Split-Path -Path $MyInvocation.MyCommand.Definition -Parent
 $erlangkey = Get-ChildItem $erlangPath -ErrorAction SilentlyContinue
 if ( $erlangkey -eq $null ) { 
 	Write-Host "Erlang not currently installed. Installing..."
-	Start-Process -Wait "$scriptDir\otp_win64_21.1.exe" /S
+	Start-Process -Wait "$scriptDir\$installFile" /S
 }
 else {
 	Write-Host "Erlang already installed."

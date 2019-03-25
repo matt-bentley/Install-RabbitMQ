@@ -1,5 +1,5 @@
 $erlangPath = "HKLM:\SOFTWARE\Wow6432Node\Ericsson\Erlang"
-$erlangUninstall = "C:\Program Files\erl10.1\Uninstall.exe"
+$erlangUninstall = "C:\Program Files\erl9.3\Uninstall.exe"
 
 #
 # Check if Erlang is installed
